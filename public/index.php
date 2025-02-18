@@ -1,9 +1,12 @@
 <?php
 
 require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+
 session_start();
 
 use App\router;
+// use App\Router;
 use App\controllers\myAppController;
 
 $router = new Router();

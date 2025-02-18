@@ -72,9 +72,9 @@ public function editAndDeleteTask($taskId) {
             header("Location: /tasks");
             exit();
         } elseif (isset($_POST['update'])) {
-            $title = filter_var($_POST['title'], FILTER_SANITIZE_STRING);
-            $description = filter_var($_POST['description'], FILTER_SANITIZE_STRING);
-            $status = filter_var($_POST['status'], FILTER_SANITIZE_STRING);
+            $title = $_POST['title'];
+            $description = $_POST['description'];
+            $status = $_POST['status'];
 
             $this->userModel->updateTask($taskId, $userId, $title, $description, $status);
             header("Location: /tasks");
