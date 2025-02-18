@@ -5,7 +5,7 @@ namespace App\controllers;
 
 use App\models\user;
 
-class userController {
+class myAppController {
     private $userModel;
     
     public function __construct($db) {

@@ -19,9 +19,10 @@ class user {
 
     //Fonction pour ajouter les utilisateurs
     function addUser($name, $email) {
-        $stmt = $this->db->prepare('INSERT INTO users (name, email) VALUES (:name, :email)');
+        $stmt = $this->db->prepare('INSERT INTO users (name, email, password) VALUES (:name, :email, :password)');
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':password', $password);
         return $stmt->execute();
     }
 }
