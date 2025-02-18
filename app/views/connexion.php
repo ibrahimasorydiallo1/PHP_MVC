@@ -1,14 +1,14 @@
-            <!-- PAGE INSCRIPTION -->
+            <!-- PAGE CONNEXION -->
 
 <?php require_once 'templates/header.php'; ?>
 
-<h1>Liste des utilisateurs</h1>
+<h1>Connectez-vous !</h1>
 
 <ul>
     <?php if (!empty($users)) { ?>
         <?php foreach ($users as $user) { ?>
             <li>
-                <?php echo $user['name']; ?> <?php echo $user['email']; ?> <?php echo $user['password']; ?>
+                <?php echo $user['name']; ?> <?php echo $user['email']; ?>
             </li>
         <?php } ?>
     <?php } else { ?>
@@ -24,11 +24,8 @@
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
     <br>
-    <label for="password">Mot de passe:</label>
-    <input type="password" id="password" name="password" required>
-    <br>
 
-    <input type="submit" value="S'inscrire">
+    <input type="submit" value="Se connecter">
 </form>
 
 <?php require_once 'templates/footer.php'; ?>
